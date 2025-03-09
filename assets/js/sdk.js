@@ -63,7 +63,7 @@ function validateForm() {
     return true;
 }
 
-function handleSubmit(event) {
+async function handleSubmit(event) {
     event.preventDefault();
 
     if (!validateForm()) return;
@@ -93,9 +93,14 @@ function handleSubmit(event) {
         formName: "Student_Admission",
         data: finalData
     }
-    ZOHO.CREATOR.API.addRecord(config).then(function (response) {
+    await ZOHO.CREATOR.API.addRecord(config).then(function (response) {
+        console.log("add record called");
         if (response.code == 3000) {
             console.log("Record added successfully");
+        }
+        else{
+            console.log(response)
+            console.log('not inserted')
         }
     });
 
