@@ -91,7 +91,19 @@ function handleSubmit(event) {
     };
 
     console.log("Form Data:", formData);
-    alert("Form submitted successfully!");
+
+    var config = {
+        appName: "YogiPOS",
+        formName: "Student Admission",
+        data: formData
+    }
+    ZOHO.CREATOR.API.addRecord(config).then(function (response) {
+        if (response.code == 3000) {
+            console.log("Record added successfully");
+        }
+    });
+
+    // alert("Form submitted successfully!");
 }
 
 document.addEventListener('DOMContentLoaded', fetchDataOnLoad);
