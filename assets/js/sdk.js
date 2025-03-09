@@ -67,7 +67,7 @@ function handleSubmit(event) {
     event.preventDefault();
 
     if (!validateForm()) return;
-
+    console.log('validation on process')
     const formData = {
         Student_Name: document.getElementById("studentName").value,
         Date_Of_Birth: document.getElementById("dob").value,
