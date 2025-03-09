@@ -85,11 +85,11 @@ async function handleSubmit() {
         }
     };
     
-    console.log("Form Data:", formData);
+    // console.log("Form Data:", formData);
 
     var config = {
         appName: "yogipos",
-        formName: "Student_Admission",
+        formName: "Student Admission",
         data: formData
     }
     await ZOHO.CREATOR.API.addRecord(config).then(function (response) {
