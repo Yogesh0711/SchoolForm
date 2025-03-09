@@ -55,15 +55,9 @@ function validateForm() {
         document.getElementById("motherNumber").focus();
         return false;
     }
-
-    // const imageInput = document.getElementById("studentImage");
-    // if (imageInput.files.length === 0) {
-    //     alert("Please upload a student image.");
-    //     return false;
-    // }
     if (feesPaid === "" || isNaN(feesPaid) || Number(feesPaid) <= 0) {
         alert("Please enter a valid fee amount greater than 0.");
-        document.getElementById("fees").value = "";  // Clear the field if invalid  
+        document.getElementById("fees").value = "";   
         return false;
     }
     return true;
