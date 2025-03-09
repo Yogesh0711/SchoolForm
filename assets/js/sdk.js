@@ -87,8 +87,8 @@ function handleSubmit(event) {
     console.log("Form Data:", formData);
 
     var config = {
-        appName: "YogiPOS",
-        formName: "Student Admission",
+        appName: "yogipos",
+        formName: "Student_Admission",
         data: formData
     }
     ZOHO.CREATOR.API.addRecord(config).then(function (response) {
