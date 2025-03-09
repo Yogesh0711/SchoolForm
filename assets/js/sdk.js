@@ -92,7 +92,7 @@ async function handleSubmit() {
         formName: "Student_Admission",
         data: finalData
     }
-    await ZOHO.CREATOR.API.addRecord(config).then(function (response) {
+    ZOHO.CREATOR.API.addRecord(config).then(function (response) {
         console.log("add record called");
         if (response.code == 3000) {
             console.log("Record added successfully");
