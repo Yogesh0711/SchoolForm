@@ -18,7 +18,7 @@ function validateForm() {
     const motherNumber = document.getElementById("motherNumber").value;
     const emailValue = document.getElementById("email").value;
     const feesPaid = document.getElementById("fees").value.trim();
-    
+
     if (!namePattern.test(studentName)) {
         alert("Student name should contain only alphabets.");
         document.getElementById("studentName").value = "";
@@ -56,16 +56,15 @@ function validateForm() {
         return false;
     }
 
-    const imageInput = document.getElementById("studentImage");
-    if (imageInput.files.length === 0) {
-        alert("Please upload a student image.");
-        return false;
-    }
+    // const imageInput = document.getElementById("studentImage");
+    // if (imageInput.files.length === 0) {
+    //     alert("Please upload a student image.");
+    //     return false;
+    // }
     if (feesPaid === "" || isNaN(feesPaid) || Number(feesPaid) <= 0) {
         alert("Please enter a valid fee amount greater than 0.");
-        feesPaidInput.value = "";  // Clear the field if invalid
-        event.preventDefault();    // Prevent form submission
-        return;
+        document.getElementById("fees").value = "";  // Clear the field if invalid  
+        return false;
     }
     return true;
 }
