@@ -83,13 +83,15 @@ function handleSubmit(event) {
         Email_Address: document.getElementById("email").value,
         Paid_Fees: document.getElementById("fees").value,
     };
-
+    const finalData={
+        "data": formData
+    }
     console.log("Form Data:", formData);
 
     var config = {
         appName: "yogipos",
         formName: "Student_Admission",
-        data: formData
+        data: finalData
     }
     ZOHO.CREATOR.API.addRecord(config).then(function (response) {
         if (response.code == 3000) {
