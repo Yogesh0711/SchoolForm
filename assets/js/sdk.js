@@ -18,6 +18,7 @@ function validateForm() {
     const motherNumber = document.getElementById("motherNumber").value;
     const emailValue = document.getElementById("email").value;
     const feesPaid = document.getElementById("fees").value.trim();
+    
     if (!namePattern.test(studentName)) {
         alert("Student name should contain only alphabets.");
         document.getElementById("studentName").value = "";
