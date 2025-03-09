@@ -90,7 +90,7 @@ async function handleSubmit(event) {
 
     var config = {
         appName: "yogipos",
-        reportName: "Student_Admission",
+        reportName: "All_Student_Admissions",
         data: finalData
     }
     await ZOHO.CREATOR.API.addRecord(config).then(function (response) {
