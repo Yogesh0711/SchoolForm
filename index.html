@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="https://js.zohostatic.com/creator/widgets/version/1.0/widgetsdk-min.js"></script>
     <script src="./assets/js/sdk.js"></script>
 </head>
+
 <body>
     <div class="form-container">
         <h2>Student Admission Form</h2>
@@ -16,7 +18,7 @@
                 <label for="studentName">Student Name:</label>
                 <input type="text" id="studentName" placeholder="Enter student name" required>
             </div>
-    
+
             <div class="form-row">
                 <label for="dob">Date of Birth:</label>
                 <input type="date" id="dob" required>
@@ -26,44 +28,44 @@
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" placeholder="Enter email" required>
             </div>
-    
+
             <div class="form-row">
                 <label for="fatherName">Father's Name:</label>
                 <input type="text" id="fatherName" placeholder="Enter father's name" required>
             </div>
 
-           
-    
+
+
             <div class="form-row">
                 <label for="fatherOccupation">Father's Occupation:</label>
                 <input type="text" id="fatherOccupation" placeholder="Occupation" required>
             </div>
-    
+
             <div class="form-row">
                 <label for="fatherNumber">Father's Contact:</label>
                 <input type="text" id="fatherNumber" placeholder="10-digit contact" required>
             </div>
-    
+
             <div class="form-row">
                 <label for="motherName">Mother's Name:</label>
                 <input type="text" id="motherName" placeholder="Enter mother's name" required>
             </div>
-    
+
             <div class="form-row">
                 <label for="motherOccupation">Mother's Occupation:</label>
                 <input type="text" id="motherOccupation" placeholder="Occupation" required>
             </div>
-    
+
             <div class="form-row">
                 <label for="motherNumber">Mother's Contact:</label>
                 <input type="text" id="motherNumber" placeholder="10-digit contact" required>
             </div>
-    
+
             <div class="form-row full-width">
                 <label for="address">Address:</label>
                 <textarea id="address" rows="3" placeholder="Enter address" required></textarea>
             </div>
-    
+
             <div class="form-row">
                 <label for="addressType">Address Type:</label>
                 <select id="addressType" required>
@@ -72,12 +74,12 @@
                     <option value="Urban">Urban</option>
                 </select>
             </div>
-    
+
             <div class="form-row">
                 <label for="studentImage">Upload Student Image:</label>
                 <input type="file" id="studentImage" accept="image/*" required>
             </div>
-    
+
             <div class="form-row full-width radio_div">
                 <label>Gender:</label>
                 <div class="radio-group">
@@ -86,16 +88,19 @@
                     <label><input type="radio" name="gender" value="Others"> Others</label>
                 </div>
             </div>
-    
-            
-    
+
+
+
             <div class="form-row">
                 <label for="fees">Fees Paid:</label>
                 <input type="number" id="fees" placeholder="Enter fees paid" required>
             </div>
-    
-            <button type="submit" class="submit-btn">Submit</button>
+            <div class="button_div">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+
         </form>
     </div>
 </body>
+
 </html>

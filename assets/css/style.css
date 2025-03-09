@@ -50,10 +50,10 @@ input[type="file"] {
 }
 .submit-btn {
     display: block;
-    width: 100%;
+    width: 35%;
     background-color: #4b96ff;
     color: #fff;
-    padding: 15px;
+    padding: 7px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -79,5 +79,11 @@ input[type="file"] {
 
 .radio_div{
     flex-direction: row;
+    justify-content: center;
+}
+
+.button_div{
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
