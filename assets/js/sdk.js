@@ -68,6 +68,7 @@ async function handleSubmit() {
     if (!validateForm()) return;
     console.log('validation on process')
     const formData = {
+        "data":{
         "Student_Name": document.getElementById("studentName").value,
         "Date_Of_Birth": document.getElementById("dob").value,
         "Father_s_Name": document.getElementById("fatherName").value,
@@ -81,6 +82,7 @@ async function handleSubmit() {
         "Gender": document.querySelector('input[name="gender"]:checked').value,
         "Email_Address": document.getElementById("email").value,
         "Paid_Fees": document.getElementById("fees").value,
+        }
     };
     const finalData={
         "data": formData
@@ -90,7 +92,7 @@ async function handleSubmit() {
     var config = {
         appName: "yogipos",
         formName: "Student_Admission",
-        data: finalData
+        data: formData
     }
     ZOHO.CREATOR.API.addRecord(config).then(function (response) {
         console.log("add record called");
