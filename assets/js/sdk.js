@@ -68,10 +68,19 @@ function handleSubmit(event) {
 
     if (!validateForm()) return;
     console.log('validation on process')
+    const dateValue = new Date(document.getElementById("dob").value);
+    var formattedVal;
+    if (!isNaN(dateValue)) {
+        const day = String(dateValue.getDate()).padStart(2, '0');
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const month = monthNames[dateValue.getMonth()];
+        const year = dateValue.getFullYear();
+        formattedVal = `${day}-${month}-${year}`;
+    }
     const formData = {
         "data":{
         "Student_Name": document.getElementById("studentName").value,
-        "Date_Of_Birth": document.getElementById("dob").value,
+            "Date_Of_Birth": formattedVal,
         "Father_s_Name": document.getElementById("fatherName").value,
         "Father_s_Occupation": document.getElementById("fatherOccupation").value,
         "Father_s_Number": document.getElementById("fatherNumber").value,
