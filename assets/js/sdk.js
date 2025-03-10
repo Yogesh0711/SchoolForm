@@ -63,7 +63,8 @@ function validateForm() {
     return true;
 }
 
-async function handleSubmit() {
+function handleSubmit(event) {
+    event.preventDefault();
 
     if (!validateForm()) return;
     console.log('validation on process')
