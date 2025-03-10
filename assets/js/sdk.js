@@ -69,19 +69,19 @@ async function handleSubmit() {
     console.log('validation on process')
     const formData = {
         "data":{
-        Student_Name: document.getElementById("studentName").value,
-        Date_Of_Birth: document.getElementById("dob").value,
-        Father_s_Name: document.getElementById("fatherName").value,
-        Father_s_Occupation: document.getElementById("fatherOccupation").value,
-        Father_s_Number: document.getElementById("fatherNumber").value,
-        Mother_s_Name: document.getElementById("motherName").value,
-        Mother_s_occupation: document.getElementById("motherOccupation").value,
-        Mother_s_Number: document.getElementById("motherNumber").value,
-        Address: document.getElementById("address").value,
-        City_Type: document.getElementById("addressType").value,
-        Gender: document.querySelector('input[name="gender"]:checked').value,
-        Email_Address: document.getElementById("email").value,
-        Paid_Fees: document.getElementById("fees").value,
+        "Student_Name": document.getElementById("studentName").value,
+        "Date_Of_Birth": document.getElementById("dob").value,
+        "Father_s_Name": document.getElementById("fatherName").value,
+        "Father_s_Occupation": document.getElementById("fatherOccupation").value,
+        "Father_s_Number": document.getElementById("fatherNumber").value,
+        "Mother_s_Name": document.getElementById("motherName").value,
+        "Mother_s_occupation": document.getElementById("motherOccupation").value,
+        "Mother_s_Number": document.getElementById("motherNumber").value,
+        "Address": document.getElementById("address").value,
+        "City_Type": document.getElementById("addressType").value,
+        "Gender": document.querySelector('input[name="gender"]:checked').value,
+        "Email_Address": document.getElementById("email").value,
+        "Paid_Fees": document.getElementById("fees").value,
         }
     };
     const finalData={
